@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font Added -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Loader Animation</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Manrope", sans-serif;
+      }
+
+      :root {
+        --first__circle__delay: 3s;
+        --second__circle__delay: 6s;
+        --third__circle__delay: 9s;
+        --fourth__circle__delay: 15s;
+      }
+
+      .parentDiv {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+
+      .wrapper {
+        width: 100%;
+        max-width: 1080px;
+      }
+
+      #circle-1 {
+        fill: transparent;
+        stroke-dasharray: 213.6583709716797;
+        stroke-dashoffset: 213.6583709716797;
+        animation: strokeIn 500ms ease-in-out var(--first__circle__delay)
+          forwards;
+      }
+
+      #circle-2 {
+        fill: transparent;
+        stroke-dasharray: 213.6583709716797;
+        stroke-dashoffset: 213.6583709716797;
+        animation: strokeIn 500ms ease-in-out var(--second__circle__delay)
+          forwards;
+      }
+
+      #circle-3 {
+        fill: transparent;
+        stroke-dasharray: 213.6583709716797;
+        stroke-dashoffset: 213.6583709716797;
+        animation: strokeIn 500ms ease-in-out var(--third__circle__delay)
+          forwards;
+      }
+
+      #circle-4 {
+        fill: transparent;
+        stroke-dasharray: 213.6583709716797;
+        stroke-dashoffset: 213.6583709716797;
+        animation: strokeIn 500ms ease-in-out var(--fourth__circle__delay)
+          forwards;
+      }
+
+      @keyframes strokeIn {
+        0% {
+          stroke-dashoffset: 213.6583709716797;
+          fill: transparent;
+        }
+
+        50% {
+          stroke-dashoffset: 0;
+          fill: transparent;
+        }
+
+        75%,
+        100% {
+          stroke-dashoffset: 0;
+          fill: #275fea;
+        }
+      }
+
+      #tick-1 {
+        stroke-dasharray: 45;
+        stroke-dashoffset: 45;
+        animation: tickIn 500ms ease-in-out var(--first__circle__delay) forwards;
+      }
+
+      #tick-2 {
+        stroke-dasharray: 45;
+        stroke-dashoffset: 45;
+        animation: tickIn 500ms ease-in-out var(--second__circle__delay)
+          forwards;
+      }
+
+      #tick-3 {
+        stroke-dasharray: 45;
+        stroke-dashoffset: 45;
+        animation: tickIn 500ms ease-in-out var(--third__circle__delay) forwards;
+      }
+
+      #tick-4 {
+        stroke-dasharray: 45;
+        stroke-dashoffset: 45;
+        animation: tickIn 500ms ease-in-out var(--fourth__circle__delay)
+          forwards;
+      }
+
+      @keyframes tickIn {
+        0%,
+        75% {
+          stroke-dashoffset: 45;
+        }
+
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+
+      #line-1 {
+        stroke-dasharray: 118;
+        stroke-dashoffset: 118;
+        animation: lineIn 500ms ease-in-out
+          calc(var(--second__circle__delay) - 0.5s) forwards;
+      }
+
+      #line-2 {
+        stroke-dasharray: 118;
+        stroke-dashoffset: 118;
+        animation: lineIn 500ms ease-in-out
+          calc(var(--third__circle__delay) - 0.5s) forwards;
+      }
+
+      #line-3 {
+        stroke-dasharray: 118;
+        stroke-dashoffset: 118;
+        animation: lineIn 500ms ease-in-out
+          calc(var(--fourth__circle__delay) - 0.5s) forwards;
+      }
+
+      @keyframes lineIn {
+        0% {
+          stroke-dashoffset: 118;
+        }
+
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parentDiv">
+      <div class="wrapper">
+        <svg
+          width="100%"
+          min-height="0"
+          viewBox="0 0 844 499"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id="Loader Animation">
+            <g id="lines">
+              <path
+                id="line-1"
+                d="M80 65V183"
+                stroke="#275FEA"
+                stroke-width="5"
+                stroke-linecap="round"
+              />
+              <path
+                id="line-2"
+                d="M80 183V301"
+                stroke="#275FEA"
+                stroke-width="5"
+                stroke-linecap="round"
+              />
+              <path
+                id="line-3"
+                d="M80 301V419"
+                stroke="#275FEA"
+                stroke-width="5"
+                stroke-linecap="round"
+              />
+            </g>
+            <g id="c-4">
+              <path
+                id="circle-4"
+                d="M114 419C114 437.778 98.7777 453 80 453C61.2223 453 46 437.778 46 419C46 400.222 61.2223 385 80 385C88.8796 385 96.9642 388.404 103.02 393.978C109.77 400.192 114 409.102 114 419Z"
+                fill="#275FEA"
+                stroke="#275FEA"
+                stroke-width="5"
+              />
+              <path
+                id="tick-4"
+                d="M65 420.193L74.2045 429.398L95 408.602"
+                stroke="white"
+                stroke-width="5"
+                stroke-linecap="round"
+              />
+              <text
+                id="Formatting output"
+                fill="black"
+                xml:space="preserve"
+                style="white-space: pre"
+                font-family="Manrope"
+                font-size="50"
+                letter-spacing="0em"
+              >
+                <tspan x="144" y="438.15">Formatting output</tspan>
+              </text>
+            </g>
+            <g id="c-3">
+              <path
+                id="circle-3"
+                d="M114 301C114 319.778 98.7777 335 80 335C61.2223 335 46 319.778 46 301C46 282.222 61.2223 267 80 267C88.8796 267 96.9642 270.404 103.02 275.978C109.77 282.192 114 291.102 114 301Z"
+                fill="#275FEA"
+                stroke="#275FEA"
+                stroke-width="5"
+              />
+              <path
+                id="tick-3"
+                d="M65 302.193L74.2045 311.398L95 290.602"
+                stroke="white"
+                stroke-width="5"
+                stroke-linecap="round"
+              />
+              <text
+                id="Generating article content"
+                fill="black"
+                xml:space="preserve"
+                style="white-space: pre"
+                font-family="Manrope"
+                font-size="50"
+                letter-spacing="0em"
+              >
+                <tspan x="144" y="320.15">Generating article content</tspan>
+              </text>
+            </g>
+            <g id="c-2">
+              <path
+                id="circle-2"
+                d="M114 183C114 201.778 98.7777 217 80 217C61.2223 217 46 201.778 46 183C46 164.222 61.2223 149 80 149C88.8796 149 96.9642 152.404 103.02 157.978C109.77 164.192 114 173.102 114 183Z"
+                fill="#275FEA"
+                stroke="#275FEA"
+                stroke-width="5"
+              />
+              <path
+                id="tick-2"
+                d="M65 184.193L74.2045 193.398L95 172.602"
+                stroke="white"
+                stroke-width="5"
+                stroke-linecap="round"
+              />
+              <text
+                id="Building knowledge graph"
+                fill="black"
+                xml:space="preserve"
+                style="white-space: pre"
+                font-family="Manrope"
+                font-size="50"
+                letter-spacing="0em"
+              >
+                <tspan x="144" y="202.15">Building knowledge graph</tspan>
+              </text>
+            </g>
+            <g id="c-1">
+              <path
+                id="circle-1"
+                d="M114 65C114 83.7777 98.7777 99 80 99C61.2223 99 46 83.7777 46 65C46 46.2223 61.2223 31 80 31C88.8796 31 96.9642 34.404 103.02 39.9782C109.77 46.1918 114 55.102 114 65Z"
+                fill="#275FEA"
+                stroke="#275FEA"
+                stroke-width="5"
+              />
+              <path
+                id="tick-1"
+                d="M65 66.1932L74.2045 75.3977L95 54.6023"
+                stroke="white"
+                stroke-width="5"
+                stroke-linecap="round"
+              />
+              <text
+                id="Retrieving context"
+                fill="black"
+                xml:space="preserve"
+                style="white-space: pre"
+                font-family="Manrope"
+                font-size="50"
+                letter-spacing="0em"
+              >
+                <tspan x="144" y="84.15">Retrieving context</tspan>
+              </text>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <script>
+      const introText = document.querySelectorAll("#lines path");
+
+      for (let i = 0; i < introText.length; i++) {
+        console.log(`letter ${i} is ${introText[i].getTotalLength()}`);
+      }
+    </script>
+  </body>
+</html>
